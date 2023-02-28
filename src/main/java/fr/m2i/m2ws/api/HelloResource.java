@@ -1,4 +1,4 @@
-package fr.m2i.m2ws;
+package fr.m2i.m2ws.api;
 
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
