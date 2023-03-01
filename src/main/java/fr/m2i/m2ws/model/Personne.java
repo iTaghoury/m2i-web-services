@@ -3,6 +3,11 @@ package fr.m2i.m2ws.model;
 public class Personne {
     private String nom;
     private String prenom;
+
+    public Personne() {
+        this("Doe", "John");
+    }
+
     public Personne(String nom, String prenom) {
         this.setNom(nom);
         this.setPrenom(prenom);

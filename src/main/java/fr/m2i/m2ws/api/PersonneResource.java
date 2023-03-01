@@ -7,7 +7,6 @@ import jakarta.ws.rs.Produces;
 public class PersonneResource {
     @GET
     @Path("/get")
-    @Produces("application/json")
     public Personne getPersonne() {
         return new Personne("Taghoury", "Idriss");
     }
