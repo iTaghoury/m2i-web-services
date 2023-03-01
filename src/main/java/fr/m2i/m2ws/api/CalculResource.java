@@ -1,5 +1,6 @@
 package fr.m2i.m2ws.api;
 
+import fr.m2i.m2ws.exception.NegativeFactException;
 import fr.m2i.m2ws.util.Math;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
@@ -30,6 +31,10 @@ public class CalculResource {
     @GET
     @Path("/fact/n={n}")
     public String fact(@PathParam("n") int n) {
-        return String.format("%d! = %d", n, Math.fact(n));
+        try {
+            return String.format("%d! = %d", n, Math.fact(n));
+        } catch (NegativeFactException e) {
+            return e.getMessage();
+        }
     }
 }
